@@ -19,7 +19,6 @@ venv/bin/pip install -r /tmp/requirements.txt && \
 rm -rf /tmp && \
     apk del .tmp-build-deps
 
-USER root
 
 RUN mkdir -p /vol/web/media && \
 mkdir -p /vol/web/static && \
@@ -29,6 +28,5 @@ chmod -R +x /scripts
 ENV DJANGO_SETTINGS_MODULE=app.settings
 ENV PATH="/scripts:/py/bin:$PATH"
 
-USER brainbox
 
 CMD ["run.sh"]
