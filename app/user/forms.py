@@ -41,6 +41,10 @@ class UserCreationForm(forms.ModelForm):
         self.fields['username'].widget.attrs['placeholder'] = 'Username'
         self.fields['referral_id'].widget.attrs['placeholder'] = 'Referral ID'
 
+        for key, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control border border-primary'
+
+
 
 class UserLoginForm(forms.Form):
     email = forms.CharField(

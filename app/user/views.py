@@ -91,4 +91,4 @@ def register(request):
 
     else:
       form = UserCreationForm()
-    return render(request, 'user/sign-up.html', {'form': form})
+    return render(request, 'user/sign-up.html', {'forms': form})
